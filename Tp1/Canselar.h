@@ -23,9 +23,6 @@ public:
 	string get_cost() const;
 	void set_cost(string cost_ch);
 
-
-
-
 	virtual void show();
 	virtual void rewrite();
 	virtual void saving();

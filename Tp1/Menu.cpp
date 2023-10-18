@@ -62,11 +62,11 @@ int Menu::show_options()
     setlocale(LC_ALL, "Russian");
     cout << "\nВыбиерете пункт меню" << endl;
     cout << "1 - Показать все" << endl;
-    cout << "2 - Поменять что-то из меню" << endl;
-    cout << "3 - Добавить новую вещь" << endl;
-    cout << "4 - Сохранить все в файл" << endl;
+    cout << "2 - Изменить данные о товаре" << endl;
+    cout << "3 - Добавить новый товар" << endl;
+    cout << "4 - Сохранить всю информацию в файл" << endl;
     cout << "5 - Загрузить информацию из файла" << endl;
-    cout << "6 - Убрать какой-то предмет" << endl;
+    cout << "6 - Удалить товар" << endl;
     cout << "7 - Поиск товаров с одинаковой ценой" << endl;
     cout << "0 - Exit" << endl;
     cout << "->  ";
@@ -100,7 +100,7 @@ void Menu::change_data()
     system("cls");
     try
     {
-        cout << "Что хотите поменять? " << list.get_size() << endl;
+        cout << "Какой товар хотите изменить? " << list.get_size() << endl;
         cin >> c2;
 
         if ((c2 < 1) || (c2 > list.get_size()))
@@ -150,7 +150,7 @@ void Menu::add_new()
 {
     int c2;
     system("cls");
-    cout << "\nЧто добавить??" << endl;
+    cout << "\nЧто добавить?" << endl;
     cout << "1 - Книгу" << endl;
     cout << "2 - Учебник" << endl;
     cout << "3 - Канцелярию" << endl;
@@ -166,7 +166,7 @@ void Menu::add_new()
         Bibliarys = book;
         book->rewrite();
         list.insert(Bibliarys);
-        cout << "Добавлена." << endl;
+        cout << "Добавлено." << endl;
         break;
     case 2:
         Textbooks * Textbook;
